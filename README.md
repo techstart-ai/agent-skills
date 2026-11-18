@@ -11,8 +11,8 @@ Agent skills we use at TechStart AI, one folder per skill under `skills/`. They 
 Copy its folder into your skills directory:
 
 ```bash
-git clone https://github.com/techstart-ai/skills.git
-cp -R skills/skills/install-skill-safely ~/.claude/skills/
+git clone https://github.com/techstart-ai/agent-skills.git
+cp -R agent-skills/skills/install-skill-safely ~/.claude/skills/
 ```
 
 Use `<project>/.claude/skills/` instead for one project only.
@@ -34,6 +34,10 @@ uv tool install --python 3.13 git+https://github.com/NVIDIA/skillspector.git
 ```
 
 Limits: the scan is static and pattern-based. It raises false alarms on ordinary content and cannot see runtime behaviour, images or binaries. It lowers risk; it does not prove a skill is safe.
+
+## Credits
+
+`install-skill-safely` relies on [SkillSpector](https://github.com/NVIDIA/SkillSpector) by NVIDIA (Apache-2.0) for the scan. SkillSpector is installed separately and is not included in this repository. This project is not affiliated with or endorsed by NVIDIA.
 
 ## Licence
 
